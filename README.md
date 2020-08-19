@@ -44,6 +44,13 @@ $ react-native run-ios
 
 - [Reference] - Atomic Design
 
+### Screenshots
+
+![screenshots](https://raw.githubusercontent.com/kpprashanth/Color-Word/master/screenshots/IOS/Search%20Box.png)
+![screenshots](https://raw.githubusercontent.com/kpprashanth/Color-Word/master/screenshots/IOS/Color%20Card%20List.png)
+![screenshots](https://raw.githubusercontent.com/kpprashanth/Color-Word/master/screenshots/Android/Search%20Box.png)
+![screenshots](https://raw.githubusercontent.com/kpprashanth/Color-Word/master/screenshots/Android/Color%20Card%20List.png)
+
 **By Prashantha KP**
 
 [//]: # "These are reference links used in the body of this note and get stripped out when the markdown processor does its job. There is no need to format nicely because it shouldn't be seen. Thanks SO - http://stackoverflow.com/questions/4823468/store-comments-in-markdown-syntax"
