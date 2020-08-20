@@ -10,7 +10,7 @@ export interface Props {
 }
 
 const applyLetterSpacing = (text: string, spaceCount: number) => {
-  return text.split('').join(' '.repeat(spaceCount));
+  return text.split('').join(' '.repeat(spaceCount)) + ' ';
 };
 
 const Logo: React.FC<Props> = (props) => {
@@ -21,7 +21,6 @@ const Logo: React.FC<Props> = (props) => {
         {applyLetterSpacing(primaryText, 3)}
       </Text>
       <Text style={[styles.secondaryText, {fontSize: scaleWidth(size)}]}>
-        {' '}
         {applyLetterSpacing(secondaryText, 1)}
       </Text>
     </View>

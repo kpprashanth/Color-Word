@@ -60,7 +60,7 @@ const styles = StyleSheet.create({
   },
   iconContainer: {
     height: scaleWidth(46),
-    backgroundColor: '#402C92',
+    backgroundColor: Colors.primary,
     marginLeft: 'auto',
     borderTopRightRadius: scaleWidth(50),
     borderBottomRightRadius: scaleWidth(50),

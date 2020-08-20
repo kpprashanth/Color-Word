@@ -15,7 +15,6 @@ import {scaleWidth} from '../utils/ScreenUtils';
 export interface Props {
   color: string;
 }
-
 const ColorGrid: React.FC<Props> = (props) => {
   const {route} = props;
   const colorWord: string = route.params.color;
@@ -59,28 +58,40 @@ const ColorGrid: React.FC<Props> = (props) => {
     );
   };
 
+  const renderElement = () => {
+    if (loader) {
+      return (
+        <ActivityIndicator
+          size="large"
+          animating={loader}
+          color="red"
+          style={styles.loader}
+        />
+      );
+    } else {
+      if (colorList.length > 0) {
+        return (
+          <FlatList
+            data={colorList}
+            renderItem={renderItem}
+            keyExtractor={(item) => item.id}
+            numColumns={colums}
+            contentContainerStyle={styles.list}
+          />
+        );
+      } else {
+        return (
+          <View style={styles.loader}>
+            <Text>Nothing To Display</Text>
+          </View>
+        );
+      }
+    }
+  };
+
   return (
     <View style={styles.root}>
-      <ActivityIndicator
-        size="large"
-        animating={loader}
-        color="red"
-        style={styles.loader}
-      />
-      {colorList.length > 0 && !loader ? (
-        <FlatList
-          data={colorList}
-          renderItem={renderItem}
-          keyExtractor={(item) => item.id}
-          numColumns={colums}
-          contentContainerStyle={styles.list}
-        />
-      ) : (
-        <View style={styles.loader}>
-          <Text>Nothing To Display</Text>
-        </View>
-      )}
-
+      {renderElement()}
       <SearchBox
         style={styles.searchBox}
         onChange={onChangeColor}
